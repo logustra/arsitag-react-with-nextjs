@@ -1,0 +1,50 @@
+{
+    "name": "arsitag-react-with-nextjs",
+    "author": "Faizal Andyka",
+    "version": "0.1.0",
+    "description": "Convert Workflow 'test-arsitag' Repository to React with Nextjs",
+    "keywords": [
+        "react",
+        "reactjs",
+        "next",
+        "nextjs",
+        "styled-components",
+        "babel",
+        "axios",
+        "reactstrap",
+        "bootstrap",
+        "fontawesome",
+        "react-fontawesome"
+    ],
+    "scripts": {
+        "dev": "node server.js",
+        "build": "next build",
+        "start": "NODE_ENV=production node server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/logustra/arsitag-react-with-nextjs"
+    },
+    "bugs": "https://github.com/logustra/arsitag-react-with-nextjs/issues",
+    "license": "ISC",
+    "dependencies": {
+        "@fortawesome/fontawesome": "^1.1.8",
+        "@fortawesome/fontawesome-free-brands": "^5.0.13",
+        "@fortawesome/react-fontawesome": "^0.0.19",
+        "axios": "^0.18.0",
+        "babel-plugin-styled-components": "^1.5.1",
+        "babel-plugin-styled-components-postcss": "^1.0.5-alpha.1",
+        "bootstrap": "^4.1.1",
+        "express": "^4.16.3",
+        "file-loader": "^1.1.11",
+        "next": "^6.0.1",
+        "next-compose-plugins": "^2.1.1",
+        "next-optimized-images": "^1.4.0",
+        "react": "^16.3.2",
+        "react-dom": "^16.3.2",
+        "react-transition-group": "^2.3.1",
+        "reactstrap": "^6.0.1",
+        "styled-components": "^3.2.6",
+        "sweetalert": "^2.1.0"
+    }
+}
