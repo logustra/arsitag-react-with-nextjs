@@ -3,7 +3,7 @@ import { Nav } from 'reactstrap';
 import styled from 'styled-components';
 
 import Aux from '../../../hoc/Aux';
-import media from '../../../themes/Media';
+import media from '../../../themes/Utils/Breakpoint';
 import NavigationItem from './NavigationItem/NavigationItem';
 import searchIcon from '../../../static/images/search.png';
 

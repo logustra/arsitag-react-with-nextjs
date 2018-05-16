@@ -8,8 +8,9 @@
             {
                 "ssr": true,
                 "displayName": true,
-                "preprocess": true
+                "preprocess": false
             }
-        ]
+        ],
+        "styled-components-postcss"
     ]
 }

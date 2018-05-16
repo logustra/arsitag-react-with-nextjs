@@ -22,7 +22,12 @@ class Navigation extends Component {
         super(props)
         this.state = {
             show: false,
+            screenSize: false,
         }
+    }
+
+    componentDidMount() {
+        this.setState({ screenSize: window.innerWidth });
     }
 
     sidebarHandler = () => {
@@ -32,10 +37,11 @@ class Navigation extends Component {
     }
 
     render() {
-        let navigation, screenSize;
-        screenSize = window.screen.availWidth;
+        let navigation;
 
-        if(screenSize > '991') {
+        if (!this.state.screenSize) {
+            navigation = 'loading...';
+        } else if (this.state.screenSize > 991) {
             navigation = (
                 <NavigationItems
                     class="d-none d-sm-none d-md-none d-lg-flex"

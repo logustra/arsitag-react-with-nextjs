@@ -31,7 +31,8 @@ const NavigationItem = (props) => {
             <InputGroup>
                 <Input placeholder={props.placeholder} />
                 <InputGroupAddon
-                    addonType="append">
+                    addonType="append"
+                    className="bla">
                     {props.children}
                 </InputGroupAddon>
             </InputGroup>

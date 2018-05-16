@@ -3,18 +3,18 @@ import Aux from './Aux';
 import { Container } from 'reactstrap';
 
 import Head from '../components/Head/Head';
-// import Navigation from '../components/Navigation/Navigation';
+import Navigation from '../components/Navigation/Navigation';
 import Footer from '../components/Footer/Footer';
 
-import '../themes/Colors';
-import '../themes/Global';
+import '../themes/Base/Colors';
+import '../themes/Base/Base';
 
 class Layout extends Component {
     render() {
         return (
             <Aux>
                 <Head title={this.props.title} description={this.props.description}/>
-                {/* <Navigation /> */}
+                <Navigation />
                 <main>
                     <Container>
                         {this.props.children}

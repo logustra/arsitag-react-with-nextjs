@@ -34,7 +34,7 @@ injectGlobal`
 
         .input-group-append {
             display: block;
-            padding 5px 15px 0 15px;
+            padding: 5px 15px 0 15px;
             border: 1px solid #ced4da;
             border-top-right-radius: 4px;
             border-bottom-right-radius: 4px;
