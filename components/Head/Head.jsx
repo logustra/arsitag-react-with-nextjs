@@ -10,6 +10,7 @@ const Head = (props) => (
     <meta name="description" content={props.description || defaultDescription} />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="/static/images/logo.png" type="image/png" />
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css"/>
   </NextHead>
 )
 
