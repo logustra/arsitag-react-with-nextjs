@@ -236,6 +236,7 @@ const NavigationItems = (props) => {
     return (
         <NavWrapperItem show={props.show} className={props.class}>
             {items}
+            {props.children}
         </NavWrapperItem>
     );
 }

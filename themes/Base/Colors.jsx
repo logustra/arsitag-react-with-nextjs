@@ -3,6 +3,7 @@ import { injectGlobal } from 'styled-components';
 injectGlobal`
     :root {
         --white: #ffffff;
+        --lightsmoke: #fafafa;
         --smoke: #f7f7f7;
         --mediumsmoke: #f1f1f1;
         --darksmoke: #d6d7d7;

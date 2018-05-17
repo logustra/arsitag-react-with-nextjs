@@ -10,6 +10,7 @@ import Aux from '../../hoc/Aux';
 import NavigationItems from './NavigationItems/NavigationItems';
 import Sidebar from './Sidebar/Sidebar';
 import Backdrop from '../UI/Backdrop/Backdrop';
+import Loading from '../UI/Loading/Loading';
 import arsitagLogo from '../../static/images/logo.png';
 
 const StyledNavbar = styled(Navbar) `
@@ -40,7 +41,11 @@ class Navigation extends Component {
         let navigation;
 
         if (!this.state.screenSize) {
-            navigation = 'loading...';
+            navigation = (
+                <NavigationItems>
+                    <Loading height="38px" />
+                </NavigationItems>
+            )
         } else if (this.state.screenSize > 991) {
             navigation = (
                 <NavigationItems
