@@ -22,3 +22,5 @@ What is Aux : [github.com](https://github.com/gajus/react-aux)
 Learn Nextjs : [nextjs.org](https://nextjs.org/learn/)
 
 Universal Webpack, CSS Imports, Plugins and Zones : [zeit.co](https://zeit.co/blog/next5)
+
+Centralizing Routing : [github.com](https://github.com/zeit/next.js/wiki/Centralizing-Routing)

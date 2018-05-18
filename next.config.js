@@ -1,5 +1,6 @@
 const withPlugins = require('next-compose-plugins');
 const optimizedImages = require('next-optimized-images');
+const getRoutes = require('./routes');
 
 const nextConfig = {
     webpack: (config) => {
@@ -74,5 +75,8 @@ module.exports = withPlugins([
             preset: 'default',
             quality: 65,
         },
-    }]
+    }],
+    {
+        exportPathMap: getRoutes
+    }
 ], nextConfig);

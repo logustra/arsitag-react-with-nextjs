@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 import {
     NavItem,
     NavLink,
@@ -7,6 +8,16 @@ import {
     InputGroup,
     InputGroupAddon,
 } from 'reactstrap';
+
+const StyledInputGroupAddon = styled(InputGroupAddon)`
+    padding: 0 !important;
+
+    .btn {
+        background: transparent;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+`
 
 const NavigationItem = (props) => {
     let item;
@@ -30,11 +41,12 @@ const NavigationItem = (props) => {
         item = (
             <InputGroup>
                 <Input placeholder={props.placeholder} />
-                <InputGroupAddon
-                    addonType="append"
-                    className="bla">
-                    {props.children}
-                </InputGroupAddon>
+                <StyledInputGroupAddon
+                    addonType="append">
+                    <button className="btn">
+                        {props.children}
+                    </button>
+                </StyledInputGroupAddon>
             </InputGroup>
         )
     }

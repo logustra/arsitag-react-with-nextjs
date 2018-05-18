@@ -40,6 +40,7 @@ const StyledLoading = styled.div`
 const Loading = (props) => {
     return (
         <StyledLoading
+            className={props.class}
             width={props.width}
             height={props.height}
             btlRadius={props.btlRadius}

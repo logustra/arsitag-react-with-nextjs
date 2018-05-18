@@ -8,16 +8,30 @@ import {
 
 import Aux from '../../hoc/Aux';
 import NavigationItems from './NavigationItems/NavigationItems';
+import media from '../../themes/Utils/Breakpoint';
 import Sidebar from './Sidebar/Sidebar';
 import Backdrop from '../UI/Backdrop/Backdrop';
 import Loading from '../UI/Loading/Loading';
 import arsitagLogo from '../../static/images/logo.png';
+import NavigationItem from './NavigationItems/NavigationItem/NavigationItem';
 
-const StyledNavbar = styled(Navbar) `
+const StyledNavbar = styled(Navbar)`
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
     background: var(--white);
 `
 
+const NavWrapperItem = styled.div`
+    display: inherit;
+
+    ${media.xs`
+        width: 100%;
+        padding-left: 1.5rem;
+    `}
+
+    ${media.mnmd`
+        width: 92%;
+    `}
+`
 class Navigation extends Component {
     constructor(props) {
         super(props)
@@ -42,9 +56,9 @@ class Navigation extends Component {
 
         if (!this.state.screenSize) {
             navigation = (
-                <NavigationItems>
+                <NavWrapperItem>
                     <Loading height="38px" />
-                </NavigationItems>
+                </NavWrapperItem>
             )
         } else if (this.state.screenSize > 991) {
             navigation = (
