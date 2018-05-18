@@ -1,10 +1,10 @@
 import React from 'react';
-import Aux from '../../../hoc/Aux';
+import Aux from 'react-aux';
 import { Input, InputGroup, InputGroupAddon } from 'reactstrap';
 
 import SidebarToggle from './SidebarToggle/SidebarToggle';
 import NavigationItems from '../NavigationItems/NavigationItems';
-import searchIcon from '../../../static/images/search.png';
+import searchIcon from '../../../static/images/search.png?webp';
 
 const Sidebar = (props) => {
     return (

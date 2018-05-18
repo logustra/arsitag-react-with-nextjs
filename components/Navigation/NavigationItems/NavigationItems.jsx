@@ -1,11 +1,11 @@
 import React from 'react';
 import { Nav } from 'reactstrap';
 import styled from 'styled-components';
+import Aux from 'react-aux';
 
-import Aux from '../../../hoc/Aux';
 import media from '../../../themes/Utils/Breakpoint';
 import NavigationItem from './NavigationItem/NavigationItem';
-import searchIcon from '../../../static/images/search.png';
+import searchIcon from '../../../static/images/search.png?webp';
 
 const NavWrapperItem = styled.div`
     display: flex;

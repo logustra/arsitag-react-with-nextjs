@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Aux from './Aux';
+import Aux from 'react-aux';
 import { Container } from 'reactstrap';
 
 import Head from '../components/Head/Head';

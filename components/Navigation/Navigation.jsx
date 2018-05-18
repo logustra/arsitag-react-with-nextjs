@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Aux from 'react-aux';
 import styled from 'styled-components';
 import {
     Container,
@@ -6,13 +7,12 @@ import {
     NavbarBrand,
 } from 'reactstrap';
 
-import Aux from '../../hoc/Aux';
 import NavigationItems from './NavigationItems/NavigationItems';
 import media from '../../themes/Utils/Breakpoint';
 import Sidebar from './Sidebar/Sidebar';
 import Backdrop from '../UI/Backdrop/Backdrop';
 import Loading from '../UI/Loading/Loading';
-import arsitagLogo from '../../static/images/logo.png';
+import arsitagLogo from '../../static/images/logo.png?webp';
 import NavigationItem from './NavigationItems/NavigationItem/NavigationItem';
 
 const StyledNavbar = styled(Navbar)`
@@ -57,7 +57,7 @@ class Navigation extends Component {
         if (!this.state.screenSize) {
             navigation = (
                 <NavWrapperItem>
-                    <Loading height="38px" />
+                    <Loading height="38px" width="100%" />
                 </NavWrapperItem>
             )
         } else if (this.state.screenSize > 991) {
