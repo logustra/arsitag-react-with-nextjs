@@ -11,13 +11,13 @@ import Reviews from './Components/Reviews/Reviews';
 import TabInformation from './Components/TabInformation/TabInformation';
 import Projects from './Components/Projects/Projects';
 
-import imgUsr from '../../static/images/logo_tumblr_22.png';
-import imgP1 from '../../static/images/p1.png';
-import imgP2 from '../../static/images/p2.png';
-import imgP3 from '../../static/images/p3.png';
-import imgP4 from '../../static/images/p4.png';
-import imgP5 from '../../static/images/p5.png';
-import imgP6 from '../../static/images/p6.png';
+import imgUsr from '../../static/images/logo_tumblr_22.png?webp';
+import imgP1 from '../../static/images/p1.png?webp';
+import imgP2 from '../../static/images/p2.png?webp';
+import imgP3 from '../../static/images/p3.png?webp';
+import imgP4 from '../../static/images/p4.png?webp';
+import imgP5 from '../../static/images/p5.png?webp';
+import imgP6 from '../../static/images/p6.png?webp';
 
 class Profile extends Component {
     constructor(props) {

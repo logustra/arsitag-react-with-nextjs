@@ -21,37 +21,12 @@ const StyledCard = styled(Card) `
         border-radius: 0;
 
         ~ .card-body {
-            display: flex;
-            align-items: center;
-            padding-top: 24px;
-            padding-bottom: 15px;
 
             .user-img-loading {
                 position: relative;
                 margin-top: -60px;
                 margin-right: 20px;
             }
-
-            ${media.xs`
-                flex-direction: column;
-                justify-content: center;
-                padding-bottom: 30px;
-
-                .user-img-loading {
-                    margin-bottom: 25px;
-                    margin-right: 0;
-                }
-            `}
-
-            ${media.mnsm_mxlg`
-                flex-direction: column;
-                padding-bottom: 30px;
-
-                .user-img-loading {
-                    margin-bottom: 25px;
-                    margin-right: 0;
-                }
-            `}
         }
     }
 `
@@ -64,8 +39,9 @@ const StyledCardImg = styled(CardImg) `
     border-radius: 0;
     height:270px;
     object-fit: cover;
+`
 
-    ~ .card-body {
+const StyledCardBody = styled(CardBody)`
         display: flex;
         align-items: center;
         padding-top: 24px;
@@ -105,6 +81,7 @@ const UserBody = styled.div`
     display: flex;
     width: 100%;
     justify-content: space-between;
+    align-items: center;
     margin-top: -10px;
 
     ${media.xs`
@@ -121,8 +98,7 @@ const UserGroup = styled.div`
     ${media.xs`
         text-align: center;
 
-        .btn,
-        img {
+        .btn {
             margin-top: 25px;
         }
     `}
@@ -130,8 +106,7 @@ const UserGroup = styled.div`
     ${media.sm`
         text-align: center;
 
-        .btn,
-        img {
+        .btn {
             margin-top: 25px;
         }
     `}
@@ -140,15 +115,13 @@ const UserGroup = styled.div`
         display: flex;
         flex-direction: column;
 
-        .btn,
-        img {
+        .btn {
             margin-left: 0 !important;
             width: 100%
         }
     }
 
-    .btn + .btn,
-    img + img {
+    .btn + .btn {
         margin-left: 15px;
     }
 
@@ -182,6 +155,16 @@ const UserTitle = styled.h5`
     font-size: 18px;
     margin: 0;
     color: var(--gray);
+
+    .loading {
+        ${media.xs`
+            margin: 0 auto;
+        `}
+
+        ${media.sm`
+            margin: 0 auto;
+        `}
+    }
 `
 
 const Cover = (props) => {
@@ -191,7 +174,7 @@ const Cover = (props) => {
         cover = (
             <StyledCard>
                 <StyledCardImg top src={imgCover} alt="cover" />
-                <CardBody className="d-flex">
+                <StyledCardBody className="d-flex">
                     <UserImg src={imgUser} alt="User Image" />
                     <UserBody className="mt-1">
                         <UserGroup>
@@ -218,15 +201,15 @@ const Cover = (props) => {
                         </Button>
                         </UserGroup>
                     </UserBody>
-                </CardBody>
+                </StyledCardBody>
             </StyledCard>
         );
     } else {
         cover = (
             <StyledCard>
                 <Loading class="styled-card-img-loading" height="270px" bRadius="0" />
-                <CardBody className="d-flex">
-                    <Loading class="user-img-loading" height="128px" width="128px" bRadius="50%" bxShadow="true" />
+                <StyledCardBody className="d-flex">
+                    <Loading class="user-img-loading" height="128px" width="128px" bRadius="50%" bxShadow="true" type="img" />
                     <UserBody className="mt-1">
                         <UserGroup>
                             <UserTitle>
@@ -238,11 +221,11 @@ const Cover = (props) => {
                         </UserGroup>
 
                         <UserGroup>
-                            <Loading height="38px" width="135" />
-                            <Loading height="38px" width="150" />
+                            <Loading class="btn" height="38px" width="135px" />
+                            <Loading class="btn" height="38px" width="150px" />
                         </UserGroup>
                     </UserBody>
-                </CardBody>
+                </StyledCardBody>
             </StyledCard>
         )
     }

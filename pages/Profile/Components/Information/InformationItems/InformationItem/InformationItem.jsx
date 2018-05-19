@@ -2,11 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import FontAwesome from '@fortawesome/react-fontawesome';
 
-import iconBriefcase from '../../../../../../static/images/Briefcase - simple-line-icons.png';
-import iconGlobe from '../../../../../../static/images/Globe - simple-line-icons.png';
-import iconLocation from '../../../../../../static/images/Location-pin - simple-line-icons.png';
-import iconPhone from '../../../../../../static/images/Phone - simple-line-icons Copy 2.png';
-import iconUser from '../../../../../../static/images/User - simple-line-icons.png';
+import iconBriefcase from '../../../../../../static/images/Briefcase - simple-line-icons.png?webp';
+import iconGlobe from '../../../../../../static/images/Globe - simple-line-icons.png?webp';
+import iconLocation from '../../../../../../static/images/Location-pin - simple-line-icons.png?webp';
+import iconPhone from '../../../../../../static/images/Phone - simple-line-icons Copy 2.png?webp';
+import iconUser from '../../../../../../static/images/User - simple-line-icons.png?webp';
 
 const StyledInformationTopItem = styled.li`
     color: var(--gray);
