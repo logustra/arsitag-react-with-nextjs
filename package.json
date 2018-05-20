@@ -36,8 +36,6 @@
         "axios": "^0.18.0",
         "babel-plugin-styled-components": "^1.5.1",
         "babel-plugin-styled-components-postcss": "^1.0.5-alpha.1",
-        "bootstrap": "^4.1.1",
-        "css-loader": "^0.28.11",
         "express": "^4.16.3",
         "file-loader": "^1.1.11",
         "next": "^6.0.3",

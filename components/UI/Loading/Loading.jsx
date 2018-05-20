@@ -13,11 +13,11 @@ import loadingImg from '../../../static/images/loading.png?webp';
 const StyledLoadingImg = styled.img`
     max-width: ${props => props.width || '100%'};
     max-height: ${props => props.height};
-    border-top-left-radius: ${props => props.btlRadius || '4px'};
-    border-top-right-radius: ${props => props.btrRadius || '4px'};
-    border-bottom-left-radius: ${props => props.bblRadius || '4px'};
-    border-bottom-right-radius: ${props => props.bbrbRadius || '4px'};
-    border-radius: ${props => props.btlRadius && props.btrRadius && props.bblRadius && props.bbrbRadius ? '' : props.bRadius};
+    border-top-left-radius: ${props => props.btlRadius};
+    border-top-right-radius: ${props => props.btrRadius};
+    border-bottom-left-radius: ${props => props.bblRadius};
+    border-bottom-right-radius: ${props => props.bbrbRadius};
+    border-radius: ${props => props.btlRadius && props.btrRadius && props.bblRadius && props.bbrbRadius ? '' : props.bRadius || '4px'};
     object-fit: cover;
     margin-top: ${props => props.mt};
     margin-bottom: ${props => props.mb};
@@ -28,11 +28,14 @@ const StyledLoading = styled.div`
     position: relative;
     width: ${props => props.width || '100%'};
     height: ${props => props.height};
-    border-top-left-radius: ${props => props.bRadius || '4px'};
-    border-top-right-radius: ${props => props.bRadius || '4px'};
-    border-bottom-left-radius: ${props => props.bRadius || '4px'};
-    border-bottom-right-radius: ${props => props.bRadius || '4px'};
+    border-top-left-radius: ${props => props.bRadius};
+    border-top-right-radius: ${props => props.bRadius};
+    border-bottom-left-radius: ${props => props.bRadius};
+    border-bottom-right-radius: ${props => props.bRadius};
+    border-radius: ${props => props.btlRadius && props.btrRadius && props.bblRadius && props.bbrbRadius ? '' : props.bRadius || '4px'};
     background: var(--lightsmoke);
+    margin-top: ${props => props.mt};
+    margin-bottom: ${props => props.mb};
 
     &:before {
         display: block;
@@ -40,15 +43,18 @@ const StyledLoading = styled.div`
         position: absolute;
         width: 100%;
         height: ${props => props.height};
-        border-top-left-radius: ${props => props.bRadius || '4px'};
+        border-top-left-radius: ${props => props.bRadius};
         border-top-right-radius: ${props => props.bRadius || '4px'};
         border-bottom-left-radius: ${props => props.bRadius || '4px'};
         border-bottom-right-radius: ${props => props.bRadius || '4px'};
+        border-radius: ${props => props.btlRadius && props.btrRadius && props.bblRadius && props.bbrbRadius ? '' : props.bRadius || '4px'};
         left: 0;
         top: 0;
         background: var(--darksmoke);
         opacity: .1;
         animation: ${animation.ProgressLeftToRight} .5s infinite ease-out;
+        margin-top: ${props => props.mt};
+        margin-bottom: ${props => props.mb};
     }
 `
 
@@ -58,7 +64,7 @@ const Loading = (props) => {
     if (props.type === 'img') {
         loading = (
             <StyledLoadingImg
-                className={`${props.class} loading`}
+                className={`${props.class ? props.class : ''} loading`}
                 src={loadingImg}
                 alt="Loading..."
                 width={props.width}
@@ -75,7 +81,7 @@ const Loading = (props) => {
     } else {
         loading = (
             <StyledLoading
-                className={`${props.class} loading`}
+                className={`${props.class ? props.class : ''} loading`}
                 src={loadingImg}
                 alt="Loading..."
                 width={props.width}

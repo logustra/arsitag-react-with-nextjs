@@ -68,7 +68,8 @@ const InformationItem = (props) => {
 
     if (props.type === 'iTop') {
         item = (
-            <StyledInformationTopItem>
+            <StyledInformationTopItem
+                className={props.class}>
                 {props.children}
             </StyledInformationTopItem>
         )

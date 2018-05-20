@@ -8,6 +8,21 @@ const StyledInformation = styled(Card)`
     border: 0;
     box-shadow: 0 2px 4px 0 #e6e7e8;
     margin-bottom: 30px;
+
+    .i-top-items-loading,
+    .i-middle-items-loading,
+    .i-bottom-items-loading {
+        padding-left: 0;
+    }
+
+    .i-bottom-items-loading {
+        li {
+            a {
+                color: var(--lightsmoke);
+                background: var(--lightsmoke);
+            }
+        }
+    }
 `
 
 class Information extends Component {
@@ -42,8 +57,8 @@ class Information extends Component {
                         call={this.state.call}
                         clicked={() => this.callNowHandler()} />
 
-                    <InformationItems type="iMiddle" />
-                    <InformationItems type="iBottom" />
+                    <InformationItems type="iMiddle" loading={this.props.loading} />
+                    <InformationItems type="iBottom" loading={this.props.loading} />
                 </CardBody>
             </StyledInformation>
         );

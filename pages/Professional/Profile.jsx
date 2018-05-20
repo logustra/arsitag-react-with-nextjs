@@ -3,8 +3,8 @@ import { Row, Col } from 'reactstrap';
 
 import axios from '../../services/Axios';
 import withErrorHandler from '../../hoc/withErrorHandler';
-import Layout from '../../hoc/Layout';
 
+import Layout from '../../hoc/Layout';
 import Cover from './Components/Cover/Cover';
 import Information from './Components/Information/Information';
 import Reviews from './Components/Reviews/Reviews';
@@ -23,6 +23,7 @@ class Profile extends Component {
     constructor(props) {
         super(props)
         this.state = {
+            loading: true,
             data: null,
             tabs: [
                 {
@@ -121,6 +122,7 @@ class Profile extends Component {
         }).catch(error => {
             console.log(error);
         })
+        this.setState({ loading: false })
     }
 
     render() {
@@ -129,6 +131,21 @@ class Profile extends Component {
         profile = (
             <Layout>
                 <Cover />
+
+                <Row>
+                    <Col lg="4" xl="3">
+                        <Information loading={this.state.loading}/>
+
+                        {/* <Reviews
+                                count={this.state.data.review_counter}
+                                datas={this.state.reviews} /> */}
+                    </Col>
+
+                    {/* <Col lg="8" xl="9">
+                            <TabInformation datas={this.state.tabs} />
+                            <Projects data={this.state.projects} />
+                        </Col> */}
+                </Row>
             </Layout>
         );
 
@@ -141,7 +158,7 @@ class Profile extends Component {
                         name={this.state.data.name}
                         count={this.state.data.review_counter} />
 
-                    {/* <Row>
+                    <Row>
                         <Col lg="4" xl="3">
                             <Information
                                 name={this.state.data.name}
@@ -149,16 +166,16 @@ class Profile extends Component {
                                 location={this.state.data.location}
                                 website={this.state.data.website} />
 
-                            <Reviews
+                            {/* <Reviews
                                 count={this.state.data.review_counter}
-                                datas={this.state.reviews} />
+                                datas={this.state.reviews} /> */}
                         </Col>
 
-                        <Col lg="8" xl="9">
+                        {/* <Col lg="8" xl="9">
                             <TabInformation datas={this.state.tabs} />
                             <Projects data={this.state.projects} />
-                        </Col>
-                    </Row> */}
+                        </Col> */}
+                    </Row>
                 </Layout>
             )
         }

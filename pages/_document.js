@@ -10,10 +10,12 @@ export default class MyDocument extends Document {
   }
 
     render () {
+        const { pathname, query } = this.props;
+
         return (
         <html>
             <Head>
-            <title>Nextjs App</title>
+            <title>Nextjs</title>
             <link rel="stylesheet" href="/static/css/bootstrap.min.css" />
             {this.props.styleTags}
             </Head>
