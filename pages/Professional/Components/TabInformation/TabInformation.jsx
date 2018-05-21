@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Card, CardBody, Nav, TabContent } from 'reactstrap';
 import classnames from 'classnames';
+import Aux from 'react-aux';
 
 import TabInformationItem from './TabInformationItem/TabInformationItem';
 import TabContentItem from './TabContentItem/TabContentItem';
+import Loading from '../../../../components/UI/Loading/Loading';
 
 const StyledTabInformation = styled(Card) `
     border: 0;
@@ -129,7 +131,7 @@ class TabInformation extends Component {
     }
 
     render() {
-        let tabItems, tabContents, DetailTabHandler;
+        let tabItems, tabContents, DetailTabHandler, tabInformationItem, tabInformation;
 
         DetailTabHandler = [
             this.Tab0,
@@ -138,14 +140,27 @@ class TabInformation extends Component {
         ]
 
         tabItems = this.props.datas.map( (data, index) => {
-            return (
-                <TabInformationItem
-                    key={index}
-                    class={classnames({ active: this.state.activeTab === index })}
-                    clicked={() => this.TabHandler(index)}>
-                    {data.title}
-                </TabInformationItem>
-            )
+
+            if (this.props.loading) {
+                tabInformationItem = (
+                    <TabInformationItem
+                        key={index}
+                        class={classnames({ active: this.state.activeTab === index })}>
+                        <Loading height="22px" width="53px"/>
+                    </TabInformationItem>
+                )
+            } else {
+                tabInformationItem = (
+                    <TabInformationItem
+                        key={index}
+                        class={classnames({ active: this.state.activeTab === index })}
+                        clicked={() => this.TabHandler(index)}>
+                        {data.title}
+                    </TabInformationItem>
+                )
+            }
+
+            return tabInformationItem;
         });
 
         tabContents = this.props.datas.map( (data, index) => {
@@ -161,20 +176,37 @@ class TabInformation extends Component {
             )
         });
 
+        if (this.props.loading) {
+            tabInformation = (
+                <StyledTabInformation>
+                    <CardBody>
+                        <StyledNav tabs>
+                            {tabItems}
+                        </StyledNav>
 
-        return (
-            <StyledTabInformation>
-                <CardBody>
-                    <StyledNav tabs>
-                        {tabItems}
-                    </StyledNav>
+                        <StyledTabContent activeTab={this.state.activeTab}>
+                            <Loading height="69px" />
+                        </StyledTabContent>
+                    </CardBody>
+                </StyledTabInformation>
+            );
+        } else {
+            tabInformation = (
+                <StyledTabInformation>
+                    <CardBody>
+                        <StyledNav tabs>
+                            {tabItems}
+                        </StyledNav>
 
-                    <StyledTabContent activeTab={this.state.activeTab}>
-                        {tabContents}
-                    </StyledTabContent>
-                </CardBody>
-            </StyledTabInformation>
-        )
+                        <StyledTabContent activeTab={this.state.activeTab}>
+                            {tabContents}
+                        </StyledTabContent>
+                    </CardBody>
+                </StyledTabInformation>
+            );
+        }
+
+        return tabInformation;
     }
 }
 

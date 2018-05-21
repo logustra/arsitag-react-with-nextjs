@@ -91,7 +91,7 @@ const InformationItems = (props) => {
                     <InformationItem
                         type={props.type}
                         class="i-top-item-loading">
-                        <Loading height="21px" />
+                        <Loading height="42px" />
                     </InformationItem>
 
                     <InformationItem
@@ -103,7 +103,7 @@ const InformationItems = (props) => {
                     <InformationItem
                         type={props.type}
                         class="i-top-item-loading">
-                        <Loading height="21px" width="80%"/>
+                        <Loading height="42px" width="80%"/>
                     </InformationItem>
 
                     <InformationItem
@@ -133,7 +133,7 @@ const InformationItems = (props) => {
                             <Loading mb="10px" height="21px" width="70%" />
                         </li>
                         <li>
-                            <Loading height="70px" />
+                            <Loading height="143px" />
                         </li>
                     </StyledInformationItems>
                 </Aux>

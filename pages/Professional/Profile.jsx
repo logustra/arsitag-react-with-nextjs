@@ -141,10 +141,12 @@ class Profile extends Component {
                                 datas={this.state.reviews} /> */}
                     </Col>
 
-                    {/* <Col lg="8" xl="9">
-                            <TabInformation datas={this.state.tabs} />
-                            <Projects data={this.state.projects} />
-                        </Col> */}
+                    <Col lg="8" xl="9">
+                            <TabInformation
+                                datas={this.state.tabs}
+                                loading={this.state.loading}/>
+                            {/* <Projects data={this.state.projects} /> */}
+                        </Col>
                 </Row>
             </Layout>
         );
@@ -171,10 +173,10 @@ class Profile extends Component {
                                 datas={this.state.reviews} /> */}
                         </Col>
 
-                        {/* <Col lg="8" xl="9">
+                        <Col lg="8" xl="9">
                             <TabInformation datas={this.state.tabs} />
-                            <Projects data={this.state.projects} />
-                        </Col> */}
+                            {/* <Projects data={this.state.projects} /> */}
+                        </Col>
                     </Row>
                 </Layout>
             )
