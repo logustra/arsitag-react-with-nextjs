@@ -15,7 +15,6 @@ export default class MyDocument extends Document {
         return (
         <html>
             <Head>
-            <title>Nextjs</title>
             <link rel="stylesheet" href="/static/css/bootstrap.min.css" />
             {this.props.styleTags}
             </Head>

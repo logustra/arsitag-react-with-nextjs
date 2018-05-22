@@ -190,7 +190,7 @@ const NavigationItems = (props) => {
                 </Nav>
             </Aux>
         )
-    } else if(props.type === 'sidebar') {
+    } else if (props.type === 'sidebar') {
         items = (
             <Aux>
                 <Nav className="ml-4" navbar>
@@ -211,9 +211,7 @@ const NavigationItems = (props) => {
                         type="anchor">
                         Profesional
                     </NavigationItem>
-                </Nav>
 
-                <Nav navbar>
                     <NavigationItem
                         type="anchor">
                         Cari Profesional

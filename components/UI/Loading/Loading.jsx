@@ -1,10 +1,3 @@
-/*
-    btl = border-top-left
-    btr = border-top-right
-    bbl = border-bottom-left
-    bbr = border-bottom-rigt
-*/
-
 import React from 'react';
 import styled from 'styled-components';
 import animation from '../../../themes/Base/Animation';
@@ -13,11 +6,7 @@ import loadingImg from '../../../static/images/loading.png?webp';
 const StyledLoadingImg = styled.img`
     max-width: ${props => props.width || '100%'};
     max-height: ${props => props.height};
-    border-top-left-radius: ${props => props.btlRadius};
-    border-top-right-radius: ${props => props.btrRadius};
-    border-bottom-left-radius: ${props => props.bblRadius};
-    border-bottom-right-radius: ${props => props.bbrbRadius};
-    border-radius: ${props => props.btlRadius && props.btrRadius && props.bblRadius && props.bbrbRadius ? '' : props.bRadius || '4px'};
+    border-radius: ${props => props.bRadius || '4px'};
     object-fit: cover;
     margin-top: ${props => props.mt};
     margin-bottom: ${props => props.mb};
@@ -28,11 +17,7 @@ const StyledLoading = styled.div`
     position: relative;
     width: ${props => props.width || '100%'};
     height: ${props => props.height};
-    border-top-left-radius: ${props => props.bRadius};
-    border-top-right-radius: ${props => props.bRadius};
-    border-bottom-left-radius: ${props => props.bRadius};
-    border-bottom-right-radius: ${props => props.bRadius};
-    border-radius: ${props => props.btlRadius && props.btrRadius && props.bblRadius && props.bbrbRadius ? '' : props.bRadius || '4px'};
+    border-radius: ${props => props.bRadius || '4px'};
     background: var(--lightsmoke);
     margin-top: ${props => props.mt};
     margin-bottom: ${props => props.mb};
@@ -43,11 +28,7 @@ const StyledLoading = styled.div`
         position: absolute;
         width: 100%;
         height: ${props => props.height};
-        border-top-left-radius: ${props => props.bRadius};
-        border-top-right-radius: ${props => props.bRadius || '4px'};
-        border-bottom-left-radius: ${props => props.bRadius || '4px'};
-        border-bottom-right-radius: ${props => props.bRadius || '4px'};
-        border-radius: ${props => props.btlRadius && props.btrRadius && props.bblRadius && props.bbrbRadius ? '' : props.bRadius || '4px'};
+        border-radius: ${props => props.bRadius || '4px'};
         left: 0;
         top: 0;
         background: var(--darksmoke);
@@ -69,10 +50,6 @@ const Loading = (props) => {
                 alt="Loading..."
                 width={props.width}
                 height={props.height}
-                btlRadius={props.btlRadius}
-                btrRadius={props.btrRadius}
-                bblRadius={props.bblRadius}
-                bbrRadius={props.bbrRadius}
                 bRadius={props.bRadius}
                 bxShadow={props.bxShadow}
                 mt={props.mt}
@@ -86,10 +63,6 @@ const Loading = (props) => {
                 alt="Loading..."
                 width={props.width}
                 height={props.height}
-                btlRadius={props.btlRadius}
-                btrRadius={props.btrRadius}
-                bblRadius={props.bblRadius}
-                bbrRadius={props.bbrRadius}
                 bRadius={props.bRadius}
                 mt={props.mt}
                 mb={props.mb} />
