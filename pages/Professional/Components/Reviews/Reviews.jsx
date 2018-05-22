@@ -4,6 +4,7 @@ import { Card, CardBody } from 'reactstrap';
 
 import media from '../../../../themes/Utils/Breakpoint';
 import ReviewItem from './ReviewItem/ReviewItem';
+import Loading from '../../../../components/UI/Loading/Loading';
 
 const StyledCard = styled(Card) `
     border: 0;
@@ -41,32 +42,72 @@ const StyledReviewItems = styled.ul`
     }
 `
 
+const ReviewHeader = styled.div`
+    display: flex;
+    align-items: center;
+
+    img {
+        margin-right: 15px;
+    }
+`
+
+const ReviewBody = styled.div`
+    margin-top: 15px;
+`
+
 const Reviews = (props) => {
-    let reviews;
+    let reviews, review;
 
-    reviews = props.datas.map((data, index) => {
-        return (
-            <ReviewItem
-                key={index}
-                src={data.img}
-                alt={data.img}
-                name={data.name}
-                rate={data.rate}>
-                {data.comment}
-            </ReviewItem>
+    if (props.count && props.datas) {
+        review = props.datas.map((data, index) => {
+            return (
+                <ReviewItem
+                    key={index}
+                    src={data.img}
+                    alt={data.img}
+                    name={data.name}
+                    rate={data.rate}>
+                    {data.comment}
+                </ReviewItem>
+            )
+        })
+
+        reviews = (
+            <StyledCard>
+                <CardBody>
+                    <Title>Review ({props.count})</Title>
+                    <StyledReviewItems className="list-unstyled">
+                        {review}
+                    </StyledReviewItems>
+                </CardBody>
+            </StyledCard>
         )
-    })
+    } else {
+        reviews = (
+            <StyledCard>
+                <CardBody>
+                    <Loading height="21px" width="80px" mb="20px" />
+                    <StyledReviewItems className="list-unstyled">
+                        <li>
+                            <ReviewHeader>
+                                <Loading height="52px" width="52px" bRadius="50%" type="img" />
+                                <div className="group">
+                                    <Loading height="21px" width="100px" mb="10px" />
+                                    <Loading height="21px" width="125px" />
+                                </div>
+                            </ReviewHeader>
 
-    return (
-        <StyledCard>
-            <CardBody>
-                <Title>Review ({props.count})</Title>
-                <StyledReviewItems className="list-unstyled">
-                    {reviews}
-                </StyledReviewItems>
-            </CardBody>
-        </StyledCard>
-    )
+                            <ReviewBody>
+                                <Loading height="63px" />
+                            </ReviewBody>
+                        </li>
+                    </StyledReviewItems>
+                </CardBody>
+            </StyledCard>
+        );
+    }
+
+    return reviews;
 }
 
 export default Reviews;

@@ -135,10 +135,7 @@ class Profile extends Component {
                 <Row>
                     <Col lg="4" xl="3">
                         <Information loading={this.state.loading}/>
-
-                        {/* <Reviews
-                                count={this.state.data.review_counter}
-                                datas={this.state.reviews} /> */}
+                        <Reviews />
                     </Col>
 
                     <Col lg="8" xl="9">
@@ -146,7 +143,7 @@ class Profile extends Component {
                                 datas={this.state.tabs}
                                 loading={this.state.loading}/>
                             {/* <Projects data={this.state.projects} /> */}
-                        </Col>
+                    </Col>
                 </Row>
             </Layout>
         );
@@ -168,9 +165,9 @@ class Profile extends Component {
                                 location={this.state.data.location}
                                 website={this.state.data.website} />
 
-                            {/* <Reviews
+                            <Reviews
                                 count={this.state.data.review_counter}
-                                datas={this.state.reviews} /> */}
+                                datas={this.state.reviews} />
                         </Col>
 
                         <Col lg="8" xl="9">

@@ -114,6 +114,7 @@ const UserGroup = styled.div`
     @media only screen and (max-width: 370px) {
         display: flex;
         flex-direction: column;
+        width: 100%;
 
         .btn {
             margin-left: 0 !important;
