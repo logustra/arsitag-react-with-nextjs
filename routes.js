@@ -1,5 +1,7 @@
 module.exports = () => {
     return {
-        '/profile': { page: '/Professional/Profile' },
+        '/inspirasi': { page: '/Inspirasi/Inspirasi' },
+        '/artikel': { page: '/Artikel/Artikel' },
+        '/professional/profile': { page: '/Professional/Profile' },
   }
 }

@@ -144,21 +144,21 @@ const NavigationItems = (props) => {
             <Aux>
                 <Nav className="ml-4" navbar>
                     <NavigationItem
-                        url="#"
+                        url="http://localhost:3000/inspirasi"
                         type="anchor">
                         Inspirasi
                     </NavigationItem>
 
                     <NavigationItem
-                        url="#"
+                        url="http://localhost:3000/artikel"
                         type="anchor">
                         Artikel
                     </NavigationItem>
 
                     <NavigationItem
-                        url="#"
+                        url="http://localhost:3000/professional/profile"
                         type="anchor">
-                        Profesional
+                        Professional
                     </NavigationItem>
                 </Nav>
 
@@ -195,21 +195,21 @@ const NavigationItems = (props) => {
             <Aux>
                 <Nav className="ml-4" navbar>
                     <NavigationItem
-                        url="#"
+                        url="inspirasi"
                         type="anchor">
                         Inspirasi
                     </NavigationItem>
 
                     <NavigationItem
-                        url="#"
+                        url="artikel"
                         type="anchor">
                         Artikel
                     </NavigationItem>
 
                     <NavigationItem
-                        url="#"
+                        url="professional/profile"
                         type="anchor">
-                        Profesional
+                        Professional
                     </NavigationItem>
 
                     <NavigationItem
