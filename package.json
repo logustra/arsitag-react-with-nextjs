@@ -14,7 +14,9 @@
         "reactstrap",
         "bootstrap",
         "fontawesome",
-        "react-fontawesome"
+        "react-fontawesome",
+        "ssr",
+        "server-side-rendering"
     ],
     "scripts": {
         "dev": "node server.js",
