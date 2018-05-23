@@ -13,6 +13,8 @@ export default class MyDocument extends Document {
         return (
             <html>
                 <Head>
+                    <title>Arsitag</title>
+                    <meta name="description" content="Convert Workflow 'test-arsitag' Repository to React with Nextjs" />
                     {this.props.styleTags}
                 </Head>
                 <body>

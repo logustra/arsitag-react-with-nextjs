@@ -5,13 +5,6 @@ import Layout from '../../hoc/Layout';
 import Loading from '../../components/UI/Loading/Loading';
 
 class Artikel extends Component {
-    static async getInitialProps(props) {
-        return {
-            title: 'Artikel',
-            description: "Convert Workflow 'test-arsitag' Repository to React with Nextjs",
-        }
-    }
-
     constructor(props) {
         super(props)
         this.state = {
