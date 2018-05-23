@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Link from 'next/link';
 import {
     NavItem,
     NavLink,
@@ -23,11 +24,12 @@ const NavigationItem = (props) => {
     let item;
     if (props.type === "anchor") {
         item = (
-            <NavLink
-                href={props.url}
-                className={props.class}>
-                {props.children}
-            </NavLink>
+            <Link href={props.url ? props.url : '#'}>
+                <NavLink
+                    className={props.class}>
+                    {props.children}
+                </NavLink>
+            </Link>
         );
     } else if ( props.type === "button") {
         item = (

@@ -3,6 +3,7 @@ import Aux from 'react-aux';
 import { Input, InputGroup, InputGroupAddon } from 'reactstrap';
 
 import SidebarToggle from './SidebarToggle/SidebarToggle';
+import NavigationItem from '../NavigationItems/NavigationItem/NavigationItem';
 import NavigationItems from '../NavigationItems/NavigationItems';
 import searchIcon from '../../../static/images/search.png?webp';
 

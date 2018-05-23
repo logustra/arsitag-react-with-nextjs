@@ -15,7 +15,7 @@ import Loading from '../UI/Loading/Loading';
 import arsitagLogo from '../../static/images/logo.png?webp';
 import NavigationItem from './NavigationItems/NavigationItem/NavigationItem';
 
-const StyledNavbar = styled(Navbar)`
+const StyledNavbar = styled(Navbar) `
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
     background: var(--white);
 `

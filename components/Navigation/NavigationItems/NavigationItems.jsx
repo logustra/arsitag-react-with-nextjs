@@ -139,24 +139,24 @@ const NavWrapperItem = styled.div`
 const NavigationItems = (props) => {
     let items;
 
-    if(props.type === 'navbar') {
+    if (props.type === 'navbar') {
         items = (
             <Aux>
                 <Nav className="ml-4" navbar>
                     <NavigationItem
-                        url="http://localhost:3000/inspirasi"
+                        url="/inspirasi"
                         type="anchor">
                         Inspirasi
                     </NavigationItem>
 
                     <NavigationItem
-                        url="http://localhost:3000/artikel"
+                        url="/artikel"
                         type="anchor">
                         Artikel
                     </NavigationItem>
 
                     <NavigationItem
-                        url="http://localhost:3000/professional/profile"
+                        url="/professional/profile"
                         type="anchor">
                         Professional
                     </NavigationItem>
@@ -195,19 +195,19 @@ const NavigationItems = (props) => {
             <Aux>
                 <Nav className="ml-4" navbar>
                     <NavigationItem
-                        url="inspirasi"
+                        url="/inspirasi"
                         type="anchor">
                         Inspirasi
                     </NavigationItem>
 
                     <NavigationItem
-                        url="artikel"
+                        url="/artikel"
                         type="anchor">
                         Artikel
                     </NavigationItem>
 
                     <NavigationItem
-                        url="professional/profile"
+                        url="/professional/profile"
                         type="anchor">
                         Professional
                     </NavigationItem>

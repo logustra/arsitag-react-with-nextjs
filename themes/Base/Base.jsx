@@ -1,4 +1,5 @@
 import { injectGlobal } from 'styled-components';
+import media from '../Utils/Breakpoint';
 
 injectGlobal`
     @import url('https://fonts.googleapis.com/css?family=Lato');
@@ -27,6 +28,23 @@ injectGlobal`
         &:active {
             background: var(--white) !important;
             color: var(--danger) !important;
+        }
+    }
+
+    .card-small {
+        margin: 65px auto 0 auto;
+        width: 500px;
+        color: var(--gray);
+        border: 0;
+        box-shadow: 0 2px 4px 0 #e6e7e8;
+        padding: 50px;
+
+        .card-title {
+            font-size: 30px;
+        }
+
+        @media only screen and (max-width: 576px) {
+            width: 100%;
         }
     }
 
